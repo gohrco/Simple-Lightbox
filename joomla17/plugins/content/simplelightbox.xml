@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" method="upgrade" group="content">
+	<name>plg_content_simplelightbox</name>
+	<creationDate>@buildDate@</creationDate>
+	<author>@buildAuthor@</author>
+	<authorEmail>@buildEmail@</authorEmail>
+	<authorUrl>@buildUrl@</authorUrl>
+	<copyright>@copyWrite@</copyright>
+	<license>@buildLicense@</license>
+	<version>@fileVers@</version>
+	<description>PLG_CONTENT_SIMPLELIGHTBOX_XML_DESCRIPTION</description>
+	
+	<files>
+		<folder>assets</folder>
+		<folder>elements</folder>
+		<folder>language</folder>
+		<folder>thumbs</folder>
+		<folder>watermarks</folder>
+		<filename plugin="simplelightbox">simplelightbox.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+	</files>
+	
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_content_simplelightbox.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_content_simplelightbox.sys.ini</language>
+	</languages>
+	
+	<config>
+		<fields name="params" addfieldpath="/plugins/content/simplelightbox/elements">
+			<fieldset name="basic">
+				<field name="resize_method" type="radio" default="gd2" label="SL_RESIZE_LBL" description="SL_RESIZE_DSC">
+					<option value="gd1">SL_RESIZE_GD1</option>
+					<option value="gd2">SL_RESIZE_GD2</option>
+				</field>
+				<field name="jpg_qual" default="80" type="text" label="SL_JPGQUAL_LBL" description="SL_JPGQUAL_DSC" />
+				<field name="rebuild_button" default="0" type="radio" label="SL_REBUILD_LBL" description="SL_REBUILD_DSC" >
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field name="auto_next_prev" type="radio" default="1" label="SL_AUTONEXT_LBL" description="SL_AUTONEXT_DSC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="force_caption" default="0" type="radio" label="SL_FORCECAP_LBL" description="SL_FORCECAP_DSC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="fb_threshold_percent" default="20" type="text" label="SL_THRESHHOLD_LBL" description="SL_THRESHHOLD_DSC" />
+				
+				<field name="watermark" type="watermarklist" default="" label="SL_WATERMARK_LBL" description="SL_WATERMARK_DSC" />
+				<field name="wtmk_threshold_percent" default="200" type="text" label="SL_WMPERCENT_LBL" description="SL_WMPERCENT_DSC" />
+				
+				<field name="wtmk_pos_x_percent" default="100" type="list" label="SL_WMKHORZ_LBL" description="SL_WMKHORZ_DSC">
+					<option value="0">SL_POS_LFT</option>
+					<option value="50">SL_POS_MID</option>
+					<option value="100">SL_POS_RGT</option>
+				</field>
+				
+				<field name="wtmk_pos_y_percent" default="100" type="list" label="SL_WMKVERT_LBL" description="SL_WMKVERT_DSC">
+					<option value="0">SL_POS_TOP</option>
+					<option value="50">SL_POS_MID</option>
+					<option value="100">SL_POS_BOT</option>
+				</field>
+				
+				<field name="jstype" default="proto" type="list" label="SL_JSTYPE_LBL" description="SL_JSTYPE_DSC">
+					<option value="proto">SL_JSTYPE_PROTO</option>
+					<option value="moo">SL_JSTYPE_MOO</option>
+				</field>
+				
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers />
+      
+</extension>
